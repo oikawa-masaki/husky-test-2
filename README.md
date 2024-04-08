@@ -322,3 +322,119 @@ npx lint-staged
 ```
 npm run test
 ```
+
+■以下、husly を動作させるためのコマンド一覧（git コマンド以下から）
+
+```shell
+oikawa.masaki:~/dev/udemy/Introduction-to-React-Testing-with-Vitest/vitest-setup-test
+% git init
+Initialized empty Git repository in /Users/oikawa.masaki/dev/udemy/Introduction-to-React-Testing-with-Vitest/vitest-setup-test/.git/
+
+oikawa.masaki:~/dev/udemy/Introduction-to-React-Testing-with-Vitest/vitest-setup-test [main]
+% git branch -M main
+
+oikawa.masaki:~/dev/udemy/Introduction-to-React-Testing-with-Vitest/vitest-setup-test [main]
+% git remote add origin git@github.com:oikawa-masaki/husky-test-2.git
+
+oikawa.masaki:~/dev/udemy/Introduction-to-React-Testing-with-Vitest/vitest-setup-test [main]
+% git remote -v
+origin  git@github.com:oikawa-masaki/husky-test-2.git (fetch)
+origin  git@github.com:oikawa-masaki/husky-test-2.git (push)
+
+oikawa.masaki:~/dev/udemy/Introduction-to-React-Testing-with-Vitest/vitest-setup-test [main]
+% npx husky init
+
+oikawa.masaki:~/dev/udemy/Introduction-to-React-Testing-with-Vitest/vitest-setup-test [main]
+% touch .husky/pre-push
+
+oikawa.masaki:~/dev/udemy/Introduction-to-React-Testing-with-Vitest/vitest-setup-test [main]
+% git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .eslintrc.cjs
+        .gitignore
+        .husky/
+        README.md
+        eslint.config.js
+        index.html
+        package-lock.json
+        package.json
+        prettier.config.js
+        public/
+        src/
+        tsconfig.json
+        tsconfig.node.json
+        vite.config.ts
+        vitest-setup.ts
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+oikawa.masaki:~/dev/udemy/Introduction-to-React-Testing-with-Vitest/vitest-setup-test [main]
+% git add .
+
+oikawa.masaki:~/dev/udemy/Introduction-to-React-Testing-with-Vitest/vitest-setup-test ![main]
+% git commit -m "husky-test-1"
+⚠ Skipping backup because there’s no initial commit yet.
+
+✔ Preparing lint-staged...
+✔ Running tasks for staged files...
+✔ Applying modifications from tasks...
+[main (root-commit) a28e1d9] husky-test-1
+ 24 files changed, 7096 insertions(+)
+ create mode 100644 .eslintrc.cjs
+ create mode 100644 .gitignore
+ create mode 100644 .husky/pre-commit
+ create mode 100644 .husky/pre-push
+ create mode 100644 README.md
+ create mode 100644 eslint.config.js
+ create mode 100644 index.html
+ create mode 100644 package-lock.json
+ create mode 100644 package.json
+ create mode 100644 prettier.config.js
+ create mode 100644 public/vite.svg
+ create mode 100644 src/App.css
+ create mode 100644 src/App.tsx
+ create mode 100644 src/assets/react.svg
+ create mode 100644 src/components/Book/Book.tsx
+ create mode 100644 src/components/Input/TextInput.test.tsx
+ create mode 100644 src/components/Input/TextInput.tsx
+ create mode 100644 src/index.css
+ create mode 100644 src/main.tsx
+ create mode 100644 src/vite-env.d.ts
+ create mode 100644 tsconfig.json
+ create mode 100644 tsconfig.node.json
+ create mode 100644 vite.config.ts
+ create mode 100644 vitest-setup.ts
+
+oikawa.masaki:~/dev/udemy/Introduction-to-React-Testing-with-Vitest/vitest-setup-test [main]
+% git push -u origin main
+
+> vitest-setup-test@0.0.0 test
+> vitest --run
+
+
+ RUN  v1.4.0 /Users/oikawa.masaki/dev/udemy/Introduction-to-React-Testing-with-Vitest/vitest-setup-test
+
+ ✓ src/components/Input/TextInput.test.tsx (2)
+   ✓ TextInput Component test
+   ✓ TextInput Event Test 2
+
+ Test Files  1 passed (1)
+      Tests  2 passed (2)
+   Start at  22:20:46
+   Duration  545ms (transform 144ms, setup 107ms, collect 169ms, tests 46ms, environment 81ms, prepare 48ms)
+
+Enumerating objects: 33, done.
+Counting objects: 100% (33/33), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (26/26), done.
+Writing objects: 100% (33/33), 63.01 KiB | 15.75 MiB/s, done.
+Total 33 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:oikawa-masaki/husky-test-2.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+```

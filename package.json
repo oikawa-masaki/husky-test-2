@@ -6,12 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "lint": "eslint src",
-    "lint:fix": "eslint --fix src",
     "preview": "vite preview",
-    "test": "vitest --run",
-    "format": "prettier --write src",
-    "prepare": "husky"
+    "test": "vitest --run"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
